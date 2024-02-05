@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "Naver Simplified",
+    "version": "1.0",
+    "description": "Simplify Naver UI to resemble Google",
+    "browser_action": {
+      "default_icon": {
+        "16": "download.png",
+        "48": "download.png",
+        "128": "download.png"
+    }
+    },
+    "permissions": [
+      "activeTab",
+      "storage"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["*://*.naver.com/*"],
+        "js": ["content.js"],
+        "run_at": "document_end"
+      }
+    ]
+  }
+  
